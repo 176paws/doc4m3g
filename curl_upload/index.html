@@ -1,0 +1,432 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Upload information to M3G - M<sup>3</sup>G API v1.0 documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="light-blue" data-md-color-accent="blue">
+      
+        <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#upload-info-to-m3g" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="M&lt;sup&gt;3&lt;/sup&gt;G API v1.0 documentation" class="md-header-nav__button md-logo" aria-label="M<sup>3</sup>G API v1.0 documentation">
+      
+  <img src="../m3g.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            M<sup>3</sup>G API v1.0 documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Upload information to M<sup>3</sup>G
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="M&lt;sup&gt;3&lt;/sup&gt;G API v1.0 documentation" class="md-nav__button md-logo" aria-label="M<sup>3</sup>G API v1.0 documentation">
+      
+  <img src="../m3g.png" alt="logo">
+
+    </a>
+    M<sup>3</sup>G API v1.0 documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Intro
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Using <i>curl</i>
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Using <i>curl</i>" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Using <i>curl</i>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../curl_download/" class="md-nav__link">
+      Download information from M<sup>3</sup>G
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Upload information to M<sup>3</sup>G
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Using <i>python</i>
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Using <i>python</i>" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Using <i>python</i>
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" class="md-nav__link">
+      Use <i>requests</i> library
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../notes/" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="upload-info-to-m3g">Upload info to M<sup>3</sup>G</h1>
+<p>In the Bash shell, one could use a command-line such <em>curl</em> to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.</p>
+<p>Let's look at a quick test example on how to update/change the firmware section of station (given its 9-character id). Indeed, if one has a look at the <a href="https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change">M<sup>3</sup>G API documentation</a>, the required argument are the <code>id</code> aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (<code>updateMadeBy</code>), the new firmware version (<code>changedTo</code>) and the date.</p>
+<p>To do this, one needs choose a station belonging to his/her agency and first get authorized. You need the "<em>Application access token</em>": you can find it in "<em>My agency</em>" once logged in in M<sup>3</sup>G, see the figure below:</p>
+<p><img alt="figure" src="../key1.png" /></p>
+<p>Let's pick the station BRUX00BEL and let's say I'd like to change the version of its firmware to '5.3.1'.</p>
+<p>One would need to pass some data, in json format e.g. stored in the file <code>firmware.json</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;updateMadeBy&quot;</span><span class="p">:</span> <span class="s2">&quot;Carine Bruyninx&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;endOfTheLastSection&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-30T09:35Z&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;changedTo&quot;</span><span class="p">:</span> <span class="s2">&quot;5.3.1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;startOfTheNewSection&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-09-30T09:36Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>where the name of the person appearing as <code>updateMadeBy</code> must correspond to one of the contacts already set up in the <em>My agency</em> page in M<sup>3</sup>G (see figure above).</p>
+<p>Then, via <em>curl</em>:</p>
+<div class="codehilite"><pre><span></span><code>curl -i -X PUT <span class="s2">&quot;https://gnss-metadata.eu/__test/v1/sitelog/firmware-change?id=BRUX00BEL&quot;</span> -H  <span class="s2">&quot;accept: application/json&quot;</span> -H  <span class="s2">&quot;Authorization: Bearer xxx..&quot;</span> -H  <span class="s2">&quot;Content-Type: application/json&quot;</span> -d @firmware.json
+</code></pre></div>
+
+<p>where <code>xxx..</code> is your "<em>Application access token</em>". The option <code>-i</code> will allow you to get back some useful information about your HTTP request, including HTTP response status code (<a href="https://restfulapi.net/http-status-codes">defined by HTTP standards</a>) e.g. <code>200</code> for a successful request:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">HTTP</span><span class="o">/</span><span class="nt">1</span><span class="p">.</span><span class="nc">1</span> <span class="nt">200</span> <span class="nt">OK</span>
+<span class="nt">Date</span><span class="o">:</span> <span class="nt">Wed</span><span class="o">,</span> <span class="nt">30</span> <span class="nt">Sep</span> <span class="nt">2020</span> <span class="nt">09</span><span class="p">:</span><span class="nd">39</span><span class="p">:</span><span class="nd">55</span> <span class="nt">GMT</span>
+<span class="nt">Server</span><span class="o">:</span> <span class="nt">Apache</span><span class="o">/</span><span class="nt">2</span><span class="p">.</span><span class="nc">4</span><span class="p">.</span><span class="nc">6</span> <span class="o">(</span><span class="nt">CentOS</span><span class="o">)</span> <span class="nt">OpenSSL</span><span class="o">/</span><span class="nt">1</span><span class="p">.</span><span class="nc">0</span><span class="p">.</span><span class="nc">2k-fips</span>
+<span class="nt">Vary</span><span class="o">:</span> <span class="nt">Accept</span>
+<span class="nt">Set-Cookie</span><span class="o">:</span> <span class="nt">_csrf</span><span class="o">=</span><span class="nt">8fcbeb32215f670ee60463f6276a160c385a199d5e096863abc43c8bb5e8d782a</span><span class="o">%</span><span class="nt">3A2</span><span class="o">%</span><span class="nt">3A</span><span class="o">%</span><span class="nt">7Bi</span><span class="o">%</span><span class="nt">3A0</span><span class="o">%</span><span class="nt">3Bs</span><span class="o">%</span><span class="nt">3A5</span><span class="o">%</span><span class="nt">3A</span><span class="o">%</span><span class="nt">22_csrf</span><span class="o">%</span><span class="nt">22</span><span class="o">%</span><span class="nt">3Bi</span><span class="o">%</span><span class="nt">3A1</span><span class="o">%</span><span class="nt">3Bs</span><span class="o">%</span><span class="nt">3A32</span><span class="o">%</span><span class="nt">3A</span><span class="o">%</span><span class="nt">22RsJfDHRXLUxqkdYTqnxwE9oRysUseDiE</span><span class="o">%</span><span class="nt">22</span><span class="o">%</span><span class="nt">3B</span><span class="o">%</span><span class="nt">7D</span><span class="o">;</span> <span class="nt">path</span><span class="o">=/;</span> <span class="nt">HttpOnly</span>
+<span class="nt">Content-Length</span><span class="o">:</span> <span class="nt">590</span>
+<span class="nt">Content-Type</span><span class="o">:</span> <span class="nt">application</span><span class="o">/</span><span class="nt">json</span><span class="o">;</span> <span class="nt">charset</span><span class="o">=</span><span class="nt">UTF-8</span>
+
+<span class="p">{</span><span class="err">&quot;id&quot;:&quot;BRUX00BEL&quot;,</span>
+<span class="err">&quot;uri&quot;:&quot;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gnss-metadata</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">__test</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sitelog</span><span class="o">/</span><span class="n">view</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="n">BRUX00BEL</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">md5Sitelog</span><span class="s2">&quot;:&quot;</span><span class="n">c569da06b17e8acf75e30c86c6024935</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">md5Geodesyml</span><span class="s2">&quot;:&quot;</span><span class="mi">8613</span><span class="n">e46ce60c32b260b72915ffef770c</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">sitelogName</span><span class="s2">&quot;:&quot;</span><span class="n">brux00bel_20200930</span><span class="o">.</span><span class="n">log</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">geodesymlName</span><span class="s2">&quot;:&quot;</span><span class="n">BRUX00BEL</span><span class="o">.</span><span class="n">xml</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">preparedDate</span><span class="s2">&quot;:&quot;</span><span class="mi">2020-09-30</span><span class="n">T00</span><span class="o">:</span><span class="mi">00</span><span class="n">Z</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">dateUpdate</span><span class="s2">&quot;:&quot;</span><span class="mi">2020-09-30</span><span class="n">T09</span><span class="o">:</span><span class="mi">39</span><span class="n">Z</span><span class="s2">&quot;,</span>
+<span class="s2">&quot;</span><span class="n">_links</span><span class="s2">&quot;:{&quot;</span><span class="n">self</span><span class="s2">&quot;:{&quot;</span><span class="n">href</span><span class="s2">&quot;:&quot;</span><span class="n">https</span><span class="o">://</span><span class="n">gnss-metadata</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">__test</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sitelog</span><span class="o">/</span><span class="n">view</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="n">BRUX00BEL</span><span class="s2">&quot;},&quot;</span><span class="n">geodesyML</span><span class="s2">&quot;:{&quot;</span><span class="n">href</span><span class="s2">&quot;:&quot;</span><span class="n">https</span><span class="o">://</span><span class="n">gnss-metadata</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">__test</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sitelog</span><span class="o">/</span><span class="n">exportxml</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="n">BRUX00BEL</span><span class="s2">&quot;},&quot;</span><span class="n">sitelog</span><span class="s2">&quot;:{&quot;</span><span class="n">href</span><span class="s2">&quot;:&quot;</span><span class="n">https</span><span class="o">://</span><span class="n">gnss-metadata</span><span class="o">.</span><span class="n">eu</span><span class="o">/</span><span class="n">__test</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">sitelog</span><span class="o">/</span><span class="n">exportlog</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="n">BRUX00BEL</span><span class="err">&quot;</span><span class="p">}</span><span class="err">}}</span>
+</code></pre></div>
+
+<p>In the output information above, you also get the links to download the updated site log in various format e.g. https://gnss-metadata.eu/__test/v1/sitelog/exportlog?id=BRUX00BEL</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../curl_download/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Download information from M<sup>3</sup>G
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../python/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Use <i>requests</i> library
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
