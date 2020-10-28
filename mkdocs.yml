@@ -1,4 +1,5 @@
 site_name: M<sup>3</sup>G API v1.0 documentation
+
 nav:
   - Intro: index.md
   - Using <i>curl</i>:
@@ -9,10 +10,21 @@ nav:
   - Notes: notes.md
 
 
+extra:
+  social:
+    - icon: fontawesome/solid/code
+      link: https://gnss-metadata.eu/__test2/site/api-docs
+      name: M3G Swagger UI
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/be_GNSS
+      name: @be_GNSS
+
+
 
 theme:
     name: 'material'
     logo: 'm3g.png'
+    favicon: 'm3g.png'
     palette:
       - scheme: 'preference'
         primary: light blue
