@@ -20,4 +20,3 @@ One can start to test M<sup>3</sup>G API thanks to different tools and libraries
 
 Here you can find some examples for common M<sup>3</sup>G tasks using the various options.
 
-<a href="https://twitter.com/intent/tweet?button_hashtag=LoveTwitter&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-dnt="true" data-show-count="false">Tweet #M3G_GNSS</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
