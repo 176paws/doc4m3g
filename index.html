@@ -207,7 +207,7 @@
 
   <li class="md-nav__item">
     <a href="curl_download/" class="md-nav__link">
-      Download data from M<sup>3</sup>G
+      GET data from M<sup>3</sup>G
     </a>
   </li>
 
@@ -219,7 +219,7 @@
 
   <li class="md-nav__item">
     <a href="curl_upload/" class="md-nav__link">
-      Upload data to M<sup>3</sup>G
+      PUT data on M<sup>3</sup>G
     </a>
   </li>
 
@@ -272,10 +272,48 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="notes/" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       Notes
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Notes" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="authorization/" class="md-nav__link">
+      M<sup>3</sup>G access token
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disclaimer/" class="md-nav__link">
+      Disclaimer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -309,19 +347,19 @@
                 
                 <h1 id="intro">Intro</h1>
 <p>M<sup>3</sup>G offers some of its functionalities through an application programming interface (API). In particular, a <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful HTTP API</a> that allows you to interact with M<sup>3</sup>G purely as data that can be uploaded, accessed, searched for, etc. via <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP requests</a>.</p>
-<p>HTTP basically allows you to GET, POST, PUT, DELETE etc. resources on a remote server. These resources are identified via URLs (=uniform resource locator). URLs usually consists of a protocol (e.g. HTTP), a domain (our servers), a path (a place on our servers), and query parameters (additional options).</p>
-<p>At present, M<sup>3</sup>G provides 5 main "groups" of operations:</p>
+<p>HTTP basically allows you to <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code> etc. resources on a remote server. These resources are identified via URLs (=uniform resource locator). URLs usually consists of a protocol (e.g. HTTP), a domain (our servers), a path (a place on our servers), and query parameters (additional options).</p>
+<p>At present, M<sup>3</sup>G API provides 5 main "groups" of operations:</p>
 <ul>
-<li><a href="https://gnss-metadata.eu/__test/site/api-docs#/Network">Network</a></li>
-<li><a href="https://gnss-metadata.eu/__test/site/api-docs#/License">License</a></li>
-<li><a href="https://gnss-metadata.eu/__test/site/api-docs#/Metadata">Metadata</a>, <a href="https://gnss-metadata.eu/__test/site/api-docs#/Product">Product</a> and <a href="https://gnss-metadata.eu/__test/site/api-docs#/Update">Update</a> (i.e. for getting info, export or update some sections of station site logs in M<sup>3</sup>G, respectively)</li>
+<li><a href="https://gnss-metadata.eu/__test/site/api-docs#/Network" target="_blank">Network</a></li>
+<li><a href="https://gnss-metadata.eu/__test/site/api-docs#/License" target="_blank">License</a></li>
+<li><a href="https://gnss-metadata.eu/__test/site/api-docs#/Metadata" target="_blank">Metadata</a>, <a href="https://gnss-metadata.eu/__test/site/api-docs#/Product" target="_blank">Product</a> and <a href="https://gnss-metadata.eu/__test/site/api-docs#/Update" target="_blank">Update</a> (i.e. for getting info, export or update some sections of station site logs in M<sup>3</sup>G, respectively)</li>
 </ul>
-<p>Within most of these resource "groups", you find endpoints that either allow you to retrieve info on a given M<sup>3</sup>G entry (i.e. a network, a station) or to ask a query to locate many M<sup>3</sup>G entries at the same time (see the <a href="https://gnss-metadata.eu/__test/site/api-docs">M<sup>3</sup>G swagger dashboard</a>).</p>
+<p>Within most of these resource "groups", you find endpoints that either allow you to retrieve info on a given M<sup>3</sup>G entry (i.e. a network, a station) or to ask a query to locate many M<sup>3</sup>G entries at the same time (see the <a href="https://gnss-metadata.eu/__test/site/api-docs" target="_blank">M<sup>3</sup>G Swagger user interface</a>).</p>
 <p>One can start to test M<sup>3</sup>G API thanks to different tools and libraries. For example, one could use:</p>
 <ul>
 <li>an HTTP program like <a href="https://curl.haxx.se/"><em>curl</em></a> to directly use M<sup>3</sup>G API from within a shell</li>
-<li><a href="https://requests.readthedocs.io/en/master/"><em>requests</em></a>, a generic Python HTTP library</li>
-<li>the browser, via the <a href="https://gnss-metadata.eu/__test/site/api-docs">M<sup>3</sup>G swagger dashboard</a> describing some of M<sup>3</sup>G function calls, based on an <a href="https://swagger.io/specification/">OpenAPI spec</a></li>
+<li>a generic Python HTTP library such as <a href="https://requests.readthedocs.io/en/master/"><em>requests</em></a></li>
+<li>the browser, via the <a href="https://gnss-metadata.eu/__test/site/api-docs" target="_blank">M<sup>3</sup>G Swagger UI</a>, based on an <a href="https://swagger.io/specification/">OpenAPI spec</a>, describing some of M<sup>3</sup>G function calls</li>
 </ul>
 <p>Here you can find some examples for common M<sup>3</sup>G tasks using the various options.</p>
                 
@@ -349,7 +387,7 @@
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Download data from M<sup>3</sup>G
+                GET data from M<sup>3</sup>G
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
