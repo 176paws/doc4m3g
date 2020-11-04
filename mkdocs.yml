@@ -1,12 +1,12 @@
-site_name: M<sup>3</sup>G API v1.0 documentation
+site_name: Get started with M<sup>3</sup>G API v1.0
 
 nav:
-  - Intro: intro.md
-  - Using <i>curl</i>:
+  - Intro to M<sup>3</sup>G API: intro.md
+  - <i>curl</i> examples:
           - GET data from M<sup>3</sup>G: curl_download.md
           - PUT data on M<sup>3</sup>G: curl_upload.md
-  - Using <i>python</i>:
-          - Use e.g. the <i>requests</i> library: python.md
+  - <i>python</i> examples:
+          - Use the <i>requests</i> library: python.md
   - Notes:
           - M<sup>3</sup>G access token: authorization.md
           - Disclaimer: disclaimer.md

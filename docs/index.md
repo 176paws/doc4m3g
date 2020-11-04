@@ -1,4 +1,4 @@
-# Welcome
+# Getting started
 
 Here you will find some examples for common M<sup>3</sup>G tasks using the [M<sup>3</sup>G application programming interface (API)](intro.md).
 

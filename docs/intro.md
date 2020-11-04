@@ -1,4 +1,4 @@
-# Intro
+# Short intro to M3G API
 
 M<sup>3</sup>G offers some of its functionalities through an application programming interface (API). In particular, a [RESTful HTTP API](https://en.wikipedia.org/wiki/Representational_state_transfer) that allows you to interact with M<sup>3</sup>G purely as data that can be uploaded, accessed, searched for, etc. via [HTTP requests](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
 
