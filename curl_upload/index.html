@@ -348,7 +348,7 @@
                 
                 
                 <h1 id="upload-info-to-m3g">Upload info to M<sup>3</sup>G</h1>
-<p>In the Bash shell, one could use a command-line such <code>curl</code> to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.</p>
+<p>In the Bash shell, one could use a command-line such <code>curl</code> to access <a href="../intro/">M<sup>3</sup>G API</a>: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.</p>
 <p>Let's look at a quick test example on how to update/change the firmware section of station (given its 9-character id). Indeed, if one has a look at the <a href="https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change">M<sup>3</sup>G API documentation</a>, the required argument are the <code>id</code> aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (<code>updateMadeBy</code>), the new firmware version (<code>changedTo</code>) and the date.</p>
 <p>To do this, one needs choose a station belonging to his/her agency and first get authorized. You need the <a href="../authorization/">"Application access token"</a>.
 Let's pick the station BRUX00BEL and let's say I'd like to change the version of its firmware to '5.3.1'.</p>
