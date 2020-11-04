@@ -1,6 +1,6 @@
 # Download info from M<sup>3</sup>G
 
-In the Bash shell, one could use a command-line such `curl` to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
+In the Bash shell, one could use a command-line such `curl` to access [M<sup>3</sup>G API](intro.md): it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
 
 ## `GET` the sitelog of a given station <a id='sitelog'></a>
 Let's say you have identified a site log (i.e. information that you also get in the M<sup>3</sup>G website) by the station 9-characters id aka `id` e.g. BRUX00BEL, and you want to download it. M3G allows you to do this and get the output in various formats: JSON, [GeodesyML](http://geodesyml.org/) or [IGS site log format](https://kb.igs.org/hc/en-us/articles/203402393-IGS-Site-Log-Manager-User-Guide).<br>

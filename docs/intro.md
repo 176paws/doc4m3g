@@ -8,7 +8,7 @@ At present, M<sup>3</sup>G API provides 5 main "groups" of operations:
 
  - [Network](https://gnss-metadata.eu/__test/site/api-docs#/Network){:target="_blank"}
  - [License](https://gnss-metadata.eu/__test/site/api-docs#/License){:target="_blank"}
- - [Metadata](https://gnss-metadata.eu/__test/site/api-docs#/Metadata){:target="_blank"}, [Product](https://gnss-metadata.eu/__test/site/api-docs#/Product){:target="_blank"} and [Update](https://gnss-metadata.eu/__test/site/api-docs#/Update){:target="_blank"} (i.e. for getting info, export or update some sections of station site logs in M<sup>3</sup>G, respectively)
+ - [Metadata](https://gnss-metadata.eu/__test/site/api-docs#/Metadata){:target="_blank"}, [Product](https://gnss-metadata.eu/__test/site/api-docs#/Product){:target="_blank"} and [Update](https://gnss-metadata.eu/__test/site/api-docs#/Update){:target="_blank"} (i.e. to get info, export or update some sections of station site logs in M<sup>3</sup>G, respectively)
 
 Within most of these resource "groups", you find endpoints that either allow you to retrieve info on a given M<sup>3</sup>G entry (i.e. a network, a station) or to ask a query to locate many M<sup>3</sup>G entries at the same time (see the [M<sup>3</sup>G Swagger user interface](https://gnss-metadata.eu/__test/site/api-docs){:target="_blank"}).
 
