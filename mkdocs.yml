@@ -1,7 +1,7 @@
 site_name: M<sup>3</sup>G API v1.0 documentation
 
 nav:
-  - Intro: index.md
+  - Intro: intro.md
   - Using <i>curl</i>:
           - GET data from M<sup>3</sup>G: curl_download.md
           - PUT data on M<sup>3</sup>G: curl_upload.md
@@ -25,8 +25,8 @@ extra:
 
 theme:
     name: 'material'
-    logo: 'm3g.png'
-    favicon: 'm3g.png'
+    logo: 'images/m3g.png'
+    favicon: 'images/m3g.png'
     palette:
       - scheme: 'preference'
         primary: light blue
@@ -37,7 +37,7 @@ theme:
 
 
 extra_css:
-  - 'extra.css'
+  - 'css/extra.css'
 
 markdown_extensions:
   - attr_list

@@ -2,4 +2,4 @@
 
 For some operations, you need to be authorized i.e. you need the "*Application access token*": you can find it in "*My agency*" once logged in in M<sup>3</sup>G, see the figure below:
 
-![figure](key1.png)
+![figure](images/key1.png)
