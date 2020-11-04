@@ -3,11 +3,13 @@ site_name: M<sup>3</sup>G API v1.0 documentation
 nav:
   - Intro: index.md
   - Using <i>curl</i>:
-          - Download data from M<sup>3</sup>G: curl_download.md
-          - Upload data to M<sup>3</sup>G: curl_upload.md
+          - GET data from M<sup>3</sup>G: curl_download.md
+          - PUT data on M<sup>3</sup>G: curl_upload.md
   - Using <i>python</i>:
           - Use e.g. the <i>requests</i> library: python.md
-  - Notes: notes.md
+  - Notes:
+          - M<sup>3</sup>G access token: authorization.md
+          - Disclaimer: disclaimer.md
 
 
 extra:

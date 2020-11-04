@@ -1,14 +1,14 @@
 # Download info from M<sup>3</sup>G
 
-In the Bash shell, one could use a command-line such *curl* to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
+In the Bash shell, one could use a command-line such `curl` to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
 
-## Get the sitelog of a given station <a id='sitelog'></a>
+## `GET` the sitelog of a given station <a id='sitelog'></a>
 Let's say you have identified a site log (i.e. information that you also get in the M<sup>3</sup>G website) by the station 9-characters id aka `id` e.g. BRUX00BEL, and you want to download it. M3G allows you to do this and get the output in various formats: JSON, [GeodesyML](http://geodesyml.org/) or [IGS site log format](https://kb.igs.org/hc/en-us/articles/203402393-IGS-Site-Log-Manager-User-Guide).<br>
 To get the JSON is the format:
 ```bash
 curl -s -X GET "https://gnss-metadata.eu/__test/v1/sitelog/view?id=BRUX00BEL" -H  "accept: application/json"
 ```
-Here we used curl to send an HTTP GET request to return the resource located by the given URL. In practice you can omit the `-X GET` (which is the default) and you might want to 'nicely' format the output with `json_pp`:
+Here we used `curl` to send an HTTP GET request to return the resource located by the given URL. In practice you can omit the `-X GET` (which is the default) and you might want to 'nicely' format the output with `json_pp`:
 
 ```bash
 curl -s -X GET "https://gnss-metadata.eu/__test/v1/sitelog/view?id=BRUX00BEL" -H  "accept: application/json" | json_pp
@@ -41,7 +41,7 @@ curl -s -X GET "https://gnss-metadata.eu/__test/v1/sitelog/exportlog?id=BRUX00BE
 ```
 
 
-## Get the sitelogs of all stations matching a search criterion<a id='sitelogs'></a>
+## `GET` the sitelogs of all stations matching a search criterion<a id='sitelogs'></a>
 Let's say you want to get the site log for entries that fit a give search criterion, e.g. stations having the string "PRAG" in their 9-char id:
 
 ```bash
@@ -60,12 +60,12 @@ PRAG00CZE
 PRAG00REU
 ...
 ```
-aka the site logs of the entries match your search criterion: `filter[id][like]=PRAG`. There are various other query parameters. You might find some others in the generated [swagger dashboard of our API](https://gnss-metadata.eu/__test/site/api-docs#/Metadata/get_sitelog). Note that, on most terminals, if `[]`and/or `{}` are present in the URL, one needs to add `-g` to the command line to disable the "URL globbing parser" and escape parentheses.
+aka the site logs of the entries match your search criterion: `filter[id][like]=PRAG`. There are various other query parameters. You might find some others in the generated [swagger dashboard of our API](https://gnss-metadata.eu/__test/site/api-docs#/Metadata/get_sitelog){:target="_blank"}. Note that, on most terminals, if `[]`and/or `{}` are present in the URL, one needs to add `-g` to the command line to disable the "URL globbing parser" and escape parentheses.
 
 
-## Get list of stations included in a given network<a id='list_netw'></a>
+## `GET` list of stations included in a given network<a id='list_netw'></a>
 It could be useful to simply get a list of stations (9-char id) included in a given network e.g. EPN, EPOS.
-Here we'll need to use *curl* and a bit of Python, but no special libraries:
+Here we'll need to use `curl` and a bit of Python, but no special libraries:
 ```bash
 curl -s -X GET "https://gnss-metadata.eu/__test/v1/network/view?id=EPN" -H  "accept: application/json" | python -c "import sys,json; print(json.load(sys.stdin)['included'])"
 ```
@@ -77,7 +77,7 @@ Similarly, to get the list of stations proposed to a given network e.g. EPOS:
 ```bash
 curl -s -X GET "https://gnss-metadata.eu/__test/v1/network/view?id=EPOS" -H  "accept: application/json" | python -c "import sys,json; print(json.load(sys.stdin)['proposed'])"
 ```
-## Get list of satellite systems that a given station is currently tracking<a id='list_sat'></a>
+## `GET` list of satellite systems that a given station is currently tracking<a id='list_sat'></a>
 
 ```bash
 curl -s -X GET "https://gnss-metadata.eu/__test/v1/sitelog/view?id=BRUX00BEL" -H  "accept: application/json" | python -c "import sys,json; print(json.load(sys.stdin)['sitelog']['receivers'][-1]['satelliteSystem'])"

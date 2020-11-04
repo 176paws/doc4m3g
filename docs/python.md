@@ -1,8 +1,8 @@
 # Python <i>requests</i> library to interact with M<sup>3</sup>G
 
-One could integrate the REST API with different languages, for example Python. Similar to *curl* in the shell, you can use *requests* in Python (quickly installable via '*pip install requests*'). It's a generic HTTP client library that allows you to send HTTP requests.
+One could integrate the REST API with different languages, for example Python. Similar to `curl` in the shell, you can use *requests* in Python (quickly installable via `pip install requests`). It's a generic HTTP client library that allows you to send HTTP requests.
 
-Let's look at the test example mentioned above, on how to update/change the firmware section of a station. To do this, one needs to get authorization via the "Application access token":
+Let's look at the test example mentioned above, on how to update/change the firmware section of a station. To do this, one needs to get authorization via the ["Application access token"](authorization.md):
 
 ```python
 import requests
@@ -13,7 +13,7 @@ headers={'accept': 'application/json', 'Authorization': 'Bearer xxx..'}
 # authorization is not needed for GET requests:
 #headers={'accept': 'application/json'}
 ```
-As mentioned in the example with *curl*, to perform this specific task, the M<sup>3</sup>G API [requires](https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change) the `id` aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (`updateMadeBy`), the new firmware version (`changedTo`) and the date.
+As mentioned in the example with `curl`, to perform this specific task, the M<sup>3</sup>G API [requires](https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change){:target="_blank"} the `id` aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (`updateMadeBy`), the new firmware version (`changedTo`) and the date.
 One could write a couple of functions on the fly using the *requests* module we have just loaded:
 
 ```python

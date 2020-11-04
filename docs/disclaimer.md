@@ -1,4 +1,4 @@
-# Notes
+# Disclaimer
 
 The examples presented here were only tested on GitBash and MobaXTerm (Windows), Bash (for Linux etc) and Terminal (MacOS).
 <!-- ### TODO - use case upload-download site log<a id='notes'></a>

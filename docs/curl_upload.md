@@ -1,13 +1,10 @@
 # Upload info to M<sup>3</sup>G
 
-In the Bash shell, one could use a command-line such *curl* to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
+In the Bash shell, one could use a command-line such `curl` to access M<sup>3</sup>G API: it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
 
 Let's look at a quick test example on how to update/change the firmware section of station (given its 9-character id). Indeed, if one has a look at the [M<sup>3</sup>G API documentation](https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change), the required argument are the `id` aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (`updateMadeBy`), the new firmware version (`changedTo`) and the date.
 
-To do this, one needs choose a station belonging to his/her agency and first get authorized. You need the "*Application access token*": you can find it in "*My agency*" once logged in in M<sup>3</sup>G, see the figure below:
-
-![figure](key1.png)
-
+To do this, one needs choose a station belonging to his/her agency and first get authorized. You need the ["Application access token"](authorization.md).
 Let's pick the station BRUX00BEL and let's say I'd like to change the version of its firmware to '5.3.1'.
 
 One would need to pass some data, in json format e.g. stored in the file `firmware.json`:
@@ -22,7 +19,7 @@ One would need to pass some data, in json format e.g. stored in the file `firmwa
 ```
 where the name of the person appearing as `updateMadeBy` must correspond to one of the contacts already set up in the *My agency* page in M<sup>3</sup>G (see figure above).
 
-Then, via *curl*:
+Then, via `curl`:
 
 ```bash
 curl -i -X PUT "https://gnss-metadata.eu/__test/v1/sitelog/firmware-change?id=BRUX00BEL" -H  "accept: application/json" -H  "Authorization: Bearer xxx.." -H  "Content-Type: application/json" -d @firmware.json
