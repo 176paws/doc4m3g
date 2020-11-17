@@ -8,6 +8,6 @@ You can start by:
   - [use *python*](python.md) (interactively, in a script, etc.).
 
 
-If you are familiar with RESTful API, go directly to the [M<sup>3</sup>G Swagger UI](https://gnss-metadata.eu/__test2/site/api-docs){:target="_blank"} (see below) to visualize and interact with the API.
+If you are familiar with RESTful API, go directly to the [M<sup>3</sup>G Swagger UI](https://gnss-metadata.eu/__test/site/api-docs){:target="_blank"} (see below) to visualize and interact with the API.
 
-<iframe style="width:100%;height:400px" src="https://gnss-metadata.eu/__test2/site/api-docs"></iframe>
+<iframe style="width:100%;height:400px" src="https://gnss-metadata.eu/__test/site/api-docs"></iframe>
