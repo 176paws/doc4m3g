@@ -1,6 +1,7 @@
 site_name: Get started with M<sup>3</sup>G API v1.0
 
 nav:
+  - Getting started : index.md
   - Intro to M<sup>3</sup>G API: intro.md
   - <i>curl</i> examples:
           - GET data from M<sup>3</sup>G: curl_download.md
