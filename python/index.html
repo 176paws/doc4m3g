@@ -421,24 +421,24 @@ We might want to get the link to the updated site log:</p>
 </code></pre></div>
 
 <p>and get:</p>
-<div class="codehilite"><pre><span></span><code><span class="s1">&#39;5.3.1&#39;</span>
- <span class="ss">```</span>
-<span class="ss"> As an alternative, we can use another available `</span><span class="n">GET</span><span class="ss">` request `</span><span class="o">/</span><span class="n">sitelog</span><span class="o">/</span><span class="n">day</span><span class="o">-</span><span class="n">view</span><span class="ss">`. This allows you to download metadata corresponding to a specific day (in the YYYY-MM-DD format) for a given station. For example:</span>
-
-<span class="ss"> ```</span><span class="n">Python</span>
- <span class="c1">#get info about a site log at a given date YYYY-MM-DD) and given the 9-char id:</span>
- <span class="n">def</span> <span class="nf">get_sitelog_date</span><span class="p">(</span><span class="n">station_id</span><span class="p">,</span> <span class="kt">date</span><span class="p">):</span>
-     <span class="k">return</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nf">url</span><span class="p">(</span><span class="s1">&#39;sitelog/day-view?id={}&amp;date={}&#39;</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">station_id</span><span class="p">,</span><span class="kt">date</span><span class="p">)),</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-
-<span class="n">my_station</span><span class="o">=</span><span class="nf">get_sitelog_date</span><span class="p">(</span><span class="s1">&#39;BRUX00BEL&#39;</span><span class="p">,</span><span class="s1">&#39;2019-06-06&#39;</span><span class="p">)</span>
-<span class="n">my_station</span><span class="p">.</span><span class="nf">json</span><span class="p">()[</span><span class="s1">&#39;sitelog&#39;</span><span class="p">][</span><span class="s1">&#39;receivers&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;firmwareVersion&#39;</span><span class="p">]</span>
- <span class="ss">``</span><span class="o">`</span>
-<span class="k">and</span> <span class="n">get</span>
+<div class="codehilite"><pre><span></span><code><span class="err">&#39;5.3.1&#39;</span>
 </code></pre></div>
 
-<p>'2.9.6-extref3'
-```
-.</p>
+<p>As an alternative, we can use another available <code>GET</code> request <code>/sitelog/day-view</code>.
+This allows you to download metadata corresponding to a specific day (in the YYYY-MM-DD format) for a given station. For example:</p>
+<div class="codehilite"><pre><span></span><code> <span class="c1">#get info about a site log at a given date YYYY-MM-DD) and given the 9-char id:</span>
+ <span class="k">def</span> <span class="nf">get_sitelog_date</span><span class="p">(</span><span class="n">station_id</span><span class="p">,</span> <span class="n">date</span><span class="p">):</span>
+     <span class="k">return</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;sitelog/day-view?id=</span><span class="si">{}</span><span class="s1">&amp;date=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">station_id</span><span class="p">,</span><span class="n">date</span><span class="p">)),</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">my_station</span><span class="o">=</span><span class="n">get_sitelog_date</span><span class="p">(</span><span class="s1">&#39;BRUX00BEL&#39;</span><span class="p">,</span><span class="s1">&#39;2019-06-06&#39;</span><span class="p">)</span>
+<span class="n">my_station</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;sitelog&#39;</span><span class="p">][</span><span class="s1">&#39;receivers&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;firmwareVersion&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>and get:</p>
+<div class="codehilite"><pre><span></span><code><span class="err">&#39;2.9.6-extref3&#39;</span>
+</code></pre></div>
+
+<p>.</p>
                 
               
               
