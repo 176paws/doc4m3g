@@ -1,6 +1,7 @@
 [data-md-color-scheme='preference'] {
   --md-primary-fg-color: #0088cc;
   --md-footer-fg-color--light:  #0088cc;
+  --md-primary-fg-color--dark:  #90030C;
 }
 
 .md-typeset {
