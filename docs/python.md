@@ -53,7 +53,7 @@ my_update.url
 ```
 or retrieve the info about the sitelog of our station (BRUX00BEL)
 ```python
-mystation=get_sitelog('BRUX00BEL')
+my_station=get_sitelog('BRUX00BEL')
 my_station.status_code
 ```
 and indeed the request is successful:
