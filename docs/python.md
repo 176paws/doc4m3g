@@ -67,18 +67,18 @@ my_station.json()['sitelog']['receivers'][-1]['firmwareVersion']
 and get:
 ```
 '5.3.1'
- ```
- As an alternative, we can use another available `GET` request `/sitelog/day-view`. This allows you to download metadata corresponding to a specific day (in the YYYY-MM-DD format) for a given station. For example:
-
- ```Python
+```
+As an alternative, we can use another available `GET` request `/sitelog/day-view`.
+This allows you to download metadata corresponding to a specific day (in the YYYY-MM-DD format) for a given station. For example:
+```python
  #get info about a site log at a given date YYYY-MM-DD) and given the 9-char id:
  def get_sitelog_date(station_id, date):
      return requests.get(url('sitelog/day-view?id={}&date={}'.format(station_id,date)),headers=headers)
 
 my_station=get_sitelog_date('BRUX00BEL','2019-06-06')
 my_station.json()['sitelog']['receivers'][-1]['firmwareVersion']
- ```
-and get
+```
+and get:
 ```
 '2.9.6-extref3'
 ```
