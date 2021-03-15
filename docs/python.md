@@ -13,6 +13,7 @@ headers={'accept': 'application/json', 'Authorization': 'Bearer xxx..'}
 # authorization is not needed for GET requests:
 #headers={'accept': 'application/json'}
 ```
+## Examples of some basic functions to interact M<sup>3</sup>G API via <i>requests</i>
 As mentioned in the example with `curl`, to perform this specific task, the M<sup>3</sup>G API [requires](https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change){:target="_blank"} the `id` aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (`updateMadeBy`), the new firmware version (`changedTo`) and the date.
 One could write a couple of functions on the fly using the *requests* module we have just loaded:
 
@@ -33,6 +34,7 @@ def update_firmware(station_id, updateMadeBy, changedTo, datetimeISO, datetimeIS
         'startOfTheNewSection': datetimeISOfuture,
         }, headers=headers)
 ```
+### Update the sitelog with a new firmware
 We then send the request to update the site log with the mandatory information:
 ```python
 my_update=update_firmware('BRUX00BEL','Carine Bruyninx', '5.3.1', '2020-09-04T11:50Z', '2020-09-04T11:51Z')
@@ -42,7 +44,7 @@ The latter will return as a response one of HTTP status codes, as we mentioned b
 ```
 200
 ```
-
+### Retrieve the sitelog
 We can now check if the record now stored in  M<sup>3</sup>G is what we expect.<br>
 We might want to get the link to the updated site log:
 ```python
@@ -60,6 +62,7 @@ and indeed the request is successful:
 ```
 200
 ```
+### Get information about the firmware version stored in the sitelog
 We can now have a look at the content of the record we're interested in aka `firmwareVersion`:
 ```python
 my_station.json()['sitelog']['receivers'][-1]['firmwareVersion']
@@ -68,6 +71,7 @@ and get:
 ```
 '5.3.1'
 ```
+### Download the sitelog of a given station at a specific day
 As an alternative, we can use another available `GET` request `/sitelog/day-view`.
 This allows you to download metadata corresponding to a specific day (in the YYYY-MM-DD format) for a given station. For example:
 ```python

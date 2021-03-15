@@ -63,7 +63,7 @@ PRAG00REU
 aka the site logs of the entries match your search criterion: `filter[id][like]=PRAG`. There are various other query parameters. You might find some others in the generated [swagger dashboard of our API](https://gnss-metadata.eu/__test/site/api-docs#/Metadata/get_sitelog){:target="_blank"}. Note that, on most terminals, if `[]`and/or `{}` are present in the URL, one needs to add `-g` to the command line to disable the "URL globbing parser" and escape parentheses.
 
 
-## `GET` list of stations included in a given network<a id='list_netw'></a>
+## `GET` the list of stations included in a given network<a id='list_netw'></a>
 It could be useful to simply get a list of stations (9-char id) included in a given network e.g. EPN, EPOS.
 Here we'll need to use `curl` and a bit of Python, but no special libraries:
 ```bash

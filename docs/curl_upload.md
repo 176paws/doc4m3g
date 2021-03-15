@@ -2,6 +2,7 @@
 
 In the Bash shell, one could use a command-line such `curl` to access [M<sup>3</sup>G API](intro.md): it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
 
+## `PUT` to update the firmware section in the sitelog of a given station
 Let's look at a quick test example on how to update/change the firmware section of station (given its 9-character id). Indeed, if one has a look at the [M<sup>3</sup>G API documentation](https://gnss-metadata.eu/__test/site/api-docs#/Update/put_sitelog_firmware_change), the required argument are the `id` aka the station 9-characters id and the records that will be changed as key/values pairs: the name of the person who is allowed to change the site log (`updateMadeBy`), the new firmware version (`changedTo`) and the date.
 
 To do this, one needs choose a station belonging to his/her agency and first get authorized. You need the ["Application access token"](authorization.md).
