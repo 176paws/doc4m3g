@@ -34,7 +34,7 @@ def update_firmware(station_id, updateMadeBy, changedTo, datetimeISO, datetimeIS
         'startOfTheNewSection': datetimeISOfuture,
         }, headers=headers)
 ```
-### Update the sitelog with a new firmware
+## Update the sitelog with a new firmware
 We then send the request to update the site log with the mandatory information:
 ```python
 my_update=update_firmware('BRUX00BEL','Carine Bruyninx', '5.3.1', '2020-09-04T11:50Z', '2020-09-04T11:51Z')
@@ -44,7 +44,7 @@ The latter will return as a response one of HTTP status codes, as we mentioned b
 ```
 200
 ```
-### Retrieve the sitelog
+## Retrieve the sitelog
 We can now check if the record now stored in  M<sup>3</sup>G is what we expect.<br>
 We might want to get the link to the updated site log:
 ```python
@@ -62,7 +62,7 @@ and indeed the request is successful:
 ```
 200
 ```
-### Get information about the firmware version stored in the sitelog
+## Get information about the firmware version stored in the sitelog
 We can now have a look at the content of the record we're interested in aka `firmwareVersion`:
 ```python
 my_station.json()['sitelog']['receivers'][-1]['firmwareVersion']
@@ -71,7 +71,7 @@ and get:
 ```
 '5.3.1'
 ```
-### Download the sitelog of a given station at a specific day
+## Download the sitelog of a given station at a specific day
 As an alternative, we can use another available `GET` request `/sitelog/day-view`.
 This allows you to download metadata corresponding to a specific day (in the YYYY-MM-DD format) for a given station. For example:
 ```python
