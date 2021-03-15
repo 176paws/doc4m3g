@@ -1,4 +1,4 @@
-# Python <i>requests</i> library to interact with M<sup>3</sup>G
+# Use <i>python requests</i> library
 
 One could integrate the REST API with different languages, for example Python. Similar to `curl` in the shell, you can use *requests* in Python (quickly installable via `pip install requests`). It's a generic HTTP client library that allows you to send HTTP requests.
 

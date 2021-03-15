@@ -1,4 +1,4 @@
-# Upload info to M<sup>3</sup>G
+# Upload data to M<sup>3</sup>G
 
 In the Bash shell, one could use a command-line such `curl` to access [M<sup>3</sup>G API](intro.md): it acts as an HTTP client and allows you to send requests and display/store the corresponding responses.
 

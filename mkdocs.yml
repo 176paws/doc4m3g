@@ -1,13 +1,13 @@
 site_name: Get started with M<sup>3</sup>G API v1.0
 
 nav:
-  - Overview: index.md
-  - Intro to M<sup>3</sup>G API: intro.md
+  - Home: index.md
+  - Short intro to M<sup>3</sup>G API: intro.md
   - <i>curl</i> examples:
-          - GET data from M<sup>3</sup>G: curl_download.md
-          - PUT data on M<sup>3</sup>G: curl_upload.md
+          - Download data from M<sup>3</sup>G: curl_download.md
+          - Upload data to M<sup>3</sup>G: curl_upload.md
   - <i>python</i> examples:
-          - Use the <i>requests</i> library: python.md
+          - Use <i>python requests</i> library: python.md
   - Notes:
           - M<sup>3</sup>G access token: authorization.md
           - Disclaimer: disclaimer.md
@@ -35,6 +35,8 @@ theme:
     font:
       text: 'Open Sans'
       code: 'Courier Prime'
+    features:
+      - toc.integrate
 
 
 extra_css:
