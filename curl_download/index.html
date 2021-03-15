@@ -256,8 +256,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-list-of-stations-included-in-a-given-network" class="md-nav__link">
-    GET list of stations included in a given network
+  <a href="#get-the-list-of-stations-included-in-a-given-network" class="md-nav__link">
+    GET the list of stations included in a given network
   </a>
   
 </li>
@@ -419,8 +419,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-list-of-stations-included-in-a-given-network" class="md-nav__link">
-    GET list of stations included in a given network
+  <a href="#get-the-list-of-stations-included-in-a-given-network" class="md-nav__link">
+    GET the list of stations included in a given network
   </a>
   
 </li>
@@ -501,7 +501,7 @@ More conveniently, one can select one of the columns of the output and get:</p>
 </code></pre></div>
 
 <p>aka the site logs of the entries match your search criterion: <code>filter[id][like]=PRAG</code>. There are various other query parameters. You might find some others in the generated <a href="https://gnss-metadata.eu/__test/site/api-docs#/Metadata/get_sitelog" target="_blank">swagger dashboard of our API</a>. Note that, on most terminals, if <code>[]</code>and/or <code>{}</code> are present in the URL, one needs to add <code>-g</code> to the command line to disable the "URL globbing parser" and escape parentheses.</p>
-<h2 id="get-list-of-stations-included-in-a-given-network"><code>GET</code> list of stations included in a given network<a id='list_netw'></a></h2>
+<h2 id="get-the-list-of-stations-included-in-a-given-network"><code>GET</code> the list of stations included in a given network<a id='list_netw'></a></h2>
 <p>It could be useful to simply get a list of stations (9-char id) included in a given network e.g. EPN, EPOS.
 Here we'll need to use <code>curl</code> and a bit of Python, but no special libraries:</p>
 <div class="codehilite"><pre><span></span><code>curl -s -X GET <span class="s2">&quot;https://gnss-metadata.eu/__test/v1/network/view?id=EPN&quot;</span> -H  <span class="s2">&quot;accept: application/json&quot;</span> <span class="p">|</span> python -c <span class="s2">&quot;import sys,json; print(json.load(sys.stdin)[&#39;included&#39;])&quot;</span>
