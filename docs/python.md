@@ -20,7 +20,7 @@ One could write a couple of functions on the fly using the *requests* module we 
 ```python
 #store the M3G API URL:
 def url(path):
-    return 'https://gnss-metadata.eu/__test/v1/' + path
+    return 'https://gnss-metadata.eu/v1/' + path
 #get info about a site log giventhe 9-char id:
 def get_sitelog(station_id):
     return requests.get(url('sitelog/view?id={}'.format(station_id)),headers=headers)
