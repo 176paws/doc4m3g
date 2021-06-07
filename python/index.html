@@ -445,7 +445,7 @@
 One could write a couple of functions on the fly using the <em>requests</em> module we have just loaded:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">#store the M3G API URL:</span>
 <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;https://gnss-metadata.eu/__test/v1/&#39;</span> <span class="o">+</span> <span class="n">path</span>
+    <span class="k">return</span> <span class="s1">&#39;https://gnss-metadata.eu/v1/&#39;</span> <span class="o">+</span> <span class="n">path</span>
 <span class="c1">#get info about a site log giventhe 9-char id:</span>
 <span class="k">def</span> <span class="nf">get_sitelog</span><span class="p">(</span><span class="n">station_id</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">(</span><span class="s1">&#39;sitelog/view?id=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">station_id</span><span class="p">)),</span><span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
