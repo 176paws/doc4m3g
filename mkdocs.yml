@@ -28,6 +28,9 @@ theme:
     name: 'material'
     logo: 'images/m3g.png'
     favicon: 'images/m3g.png'
+    icon:
+      admonition:
+        warning: octicons/alert-16
     palette:
       - scheme: 'preference'
         primary: light blue
@@ -44,4 +47,5 @@ extra_css:
 
 markdown_extensions:
   - attr_list
+  - admonition
   - codehilite
